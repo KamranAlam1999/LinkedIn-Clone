@@ -103,7 +103,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder> 
                         .withTextBackground(new ColorDrawable(Color.WHITE))
                         .withTextColor(Color.BLACK)
                         .withPopupGravity(PopupGravity.PARENT_RIGHT)
-                        .withTextSize(aCtx.getResources().getDimension(R.dimen.reactions_text_size))
+                        .withTextSize(aCtx.getResources().getDimension(com.intuit.sdp.R.dimen._12sdp))
                         .build();
 
                 ReactionPopup popup = new ReactionPopup(aCtx, config, (position) -> {
