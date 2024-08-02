@@ -19,23 +19,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LinkedIn_Clone"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.custom_user.CustomUserActivity" />
-        <activity android:name=".ui.message_user.MessageUsersActivity" />
-        <activity android:name=".ui.location.LocationActivity" />
-        <activity android:name=".ui.story.AddStoryActivity" />
-        <activity android:name=".ui.story.StoryActivity" />
-        <activity android:name=".ui.profile.EditProfileIntroActivity" />
+        <activity
+            android:name=".ui.custom_user.CustomUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.message_user.MessageUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.location.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.story.AddStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.story.StoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.EditProfileIntroActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.share_post.SharePostActivity"
+            android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
-        <activity android:name=".ui.profile.ProfileActivity" />
-        <activity android:name=".ui.home.HomeActivity" />
-        <activity android:name=".ui.login.JoinNowActivity" />
-        <activity android:name=".ui.login.LoginActivity" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.JoinNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:exported="false"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".ui.splash.SplashScreenActivity" >
+        <activity
+            android:name=".ui.splash.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
