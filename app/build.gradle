@@ -8,25 +8,27 @@ plugins {
 android {
     signingConfigs {
         debug {
-            storeFile file('D:\\Project\\LinkedIn-Clone\\linkedin_clone_key.jks')
+            storeFile file('C:\\Users\\kamranalam\\AndroidStudioProjects\\LinkedIn-Clone\\linkedin_clone_key.jks')
             storePassword 'linkedin'
             keyAlias 'linkedin_clone_key'
             keyPassword 'linkedin'
         }
     }
-    compileSdkVersion 30
+    namespace 'com.codewithshadow.linkedin_clone'
+
+    compileSdkVersion 34
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.codewithshadow.linkedin_clone"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 
@@ -34,15 +36,18 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
+//            signingConfig signingConfigs.debug
         }
         debug {
-            signingConfig signingConfigs.debug
+//            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
 }
 
@@ -57,7 +62,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation platform('com.google.firebase:firebase-bom:25.13.0')
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage'
